@@ -1,0 +1,77 @@
+Some reminders of things to use for the HTML: 
+
+i used the font Inder for my page. It's link is below those for bootstrap in the section below. 
+if you want to use the same font you need to specify     font-family: 'Inder', sans-serif;
+
+use bootstrap (include this between your head tags): 
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+
+nav bar: 
+
+    <div class="row nav"> 
+        <div class="col-sm-12">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				  <ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+					  <a class="nav-link btn" href="Neighborhood.html">Regional Sales Performance<span class="sr-only">(current)</span></a>
+					</li>
+                    <li class="nav-item active">
+                        <a class="nav-link btn" href="#">Top & Bottom Properties <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link btn" href="TrendsOverTime.html">Trends Over Time<span class="sr-only">(current)</span></a>
+                      </li>
+				  </ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+    - note that veronicas html doc is missing from the link at the moment
+
+
+btn class for nav bar:
+
+    .btn{
+        border:1px solid black; 
+        padding:5px;
+        display:inline-block;
+        margin-left:5px; 
+        margin-right:5px;
+        background-color:#E1E5F2; 
+    } 
+    .btn:hover{
+        background-color:#d1d8ef;
+    }
+
+
+
+imaging hover starting point: 
+
+    .img-fluid:hover{
+        transform: translate(-50%, 0%) scale(1.3); 
+        z-index:6;
+        transition:all 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        margin:auto;  
+    }
+    .img:hover{
+        transform:scale(1.3); 
+        z-index:6;
+        transition:all 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        margin:auto;
+    }
+
+
+ 
+
