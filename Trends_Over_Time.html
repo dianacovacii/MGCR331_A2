@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Trends Over Time
+  </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- 2 links below are for sidebar -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font links -->
+  <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+    }
+
+    .navbar {
+      padding: 1em;
+      background-color: #fff;
+    }
+
+    .logo {
+      height:80px;
+      width:auto;
+    }
+
+    .btn-primary {
+      background-color: #1F7A8C;
+      border-radius: 0;
+      border: #1F7A8C;
+      transition: all .2s ease-in-out;
+    }
+
+    .btn-primary:hover {
+      background-color: #FF742A;
+      border-radius: 0;
+    }
+
+    .header {
+      background-color: #022B3A;
+      color: #fff;
+      padding: 3em;
+      text-align: center;
+    }
+
+    .header hr {
+      width: 10em;
+      border: 0.15em #fff solid;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 1;
+
+    }
+
+    ol li {
+      color: #022B3A;
+    }
+
+    ul li a {
+      color: #022B3A;
+      transition: all .2s ease-in-out;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      color: #1F7A8C;
+      text-decoration: underline;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Inder", sans-serif;
+    }
+
+    h2 {
+      color: #022B3A;
+    }
+
+    h3 {
+      color: #1f7a8c;
+      font-size: large;
+    }
+
+    .Subheading,
+    .analysis-2 h2 {
+      color: #fff;
+    }
+
+    p {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      color: #022b3a;
+    }
+
+    .analysis-heading-divider {
+      width: 4em;
+      border: 0.1em #FF742A solid;
+      margin: 1em 0 2em 0;
+      opacity: 1;
+    }
+
+    .analysis-1 hr {
+      color: #022b3a;
+    }
+
+    .analysis-2 {
+      background-color: #1f7a8c;
+      color: #fff;
+    }
+
+    .analysis-2 p,
+    .analysis-2 ol li {
+      color: #fff;
+    }
+
+    .analysis-2 h3 {
+      color: #e1e5f2;
+    }
+
+    .analysis-2 hr {
+      color: #fff;
+    }
+
+    .analysis-4 {
+      background-color: #dbe9f5;
+    }
+
+    .img-fluid:hover {
+      transform: translate(-50%, 0%) scale(1.3);
+      z-index: 6;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      margin: auto;
+    }
+
+    .img {
+      transition: all .2s ease-in-out;
+    }
+
+    .img:hover {
+      transform: scale(1.3);
+      z-index: 6;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      margin: auto;
+    }
+
+    footer {
+      background-color: #1F7A8C;
+      padding: 1em;
+      color: #fff;
+    }
+
+    footer p {
+      color: #fff;
+    }
+
+    footer hr {
+      width: 2em;
+      border: 0.15em #fff solid;
+    }
+    .note{
+        font-size:10px; 
+        padding-top:50px;
+        padding-bottom:10px;
+    }
+    tr:nth-child(even){
+        background-color: #e1e5f2;
+    }
+    th, td{
+        text-align:right; 
+        padding:6px 15px; 
+        white-space:nowrap; 
+    }
+    thead{
+        background-color: #d1d8ef;
+    }
+    .region{
+        text-align:left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <!-- Top Nav Bar -->
+    <nav class="navbar navbar-expand-lg ">
+      <img class="navbar-brand logo" href="#" src="./img/mcgill_logo.png" alt="McGill Logo">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                <a class="dropdown-item" href="./Regional_Housing_Market_Performance.html">Regional Housing
+                    Market Performance</a>
+                <a class="dropdown-item" href="./Top_And_Bottom_Performing_Properties.html">Top and
+                    Bottom-Performing Properties</a>
+                <a class="dropdown-item" href="./Trends_Over_Time.html">Trends Over Time</a>
+                </div>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Analysis
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="./Form.html">Help Form <span class="sr-only">(current)</span></a>
+            </li>
+            </ul>
+
+        <div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#resources-links">
+            Resources
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-start" id="resources-links">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Resources</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul>
+          <li><a href="https://www.ft.com/property-sector">Financial Times - Property Sector</a></li>
+          <li><a href="https://www.theguardian.com/business/housingmarket">The Guardian - Housing Market</a>
+          </li>
+          <li><a href="https://www.bbc.com/news/topics/cdl8n2edgj5t">BBC - Housing Market</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="row header">
+      <div class="col-lg-12">
+        <h1>Trends Over Time</h1>
+        <hr />
+        <p class="Subheading">
+            Highlighting trends and patterns in British real estate from 2022 to
+            2024 across various neighborhoods.
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- Analysis 1-->
+    <div class="row analysis-1 pt-5 pb-5">
+      <div class="d-flex justify-content-center">
+        <div class="col-lg-8">
+          <div class="pt-5 pb-5">
+            <h2>Average House Price Progression</h2>
+              <h3>by Neighborhood</h3>
+              <hr class="analysis-heading-divider" />
+              <p>
+                In the chart below, we observe the average price of a
+                house in a neighborrhood and the changes this value has over a three
+                year period. This reflects key market trends over time, providing a
+                representative view of price fluctuations and regional dynamics.  
+              </p>
+              <img
+                class="w-100 pt-3 pb-3 img img-fluid"
+                src="./charts/TrendsOverTime_Chart1.png"
+                alt="Average House Prices by Neighborhood (2022-2024)"
+              />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis 2 -->
+    <div class="row analysis-2 pt-5 pb-5">
+      <div class="d-flex justify-content-center">
+        <div class="col-lg-8">
+          <div class="pt-5 pb-5">
+            <h2>Building Age and Size Trend</h2>
+              <h3>by Square Footage and Building Age Comparison</h3>
+              <hr class="analysis-heading-divider" />
+              <p>
+                In the chart below, we can visualize the relationship between
+              property size and building age, this data highlights how square
+              footage trends vary acorss different age ranges, offering insights
+              into construction patterns and preferences over time.
+            </p>
+            <img
+                class="w-100 pt-3 pb-3 img img-fluid"
+                src="./charts/TrendsOverTime_Chart2.png"
+                alt="Trends in Building Age and Square Footage"
+              />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis 3 -->
+    <div class="row analysis-3 pt-5 pb-5 d-flex justify-content-center">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+          <div class="pt-5 pb-5">
+            <h2>Neighborhood Sales Trend</h2>
+              <h3>by Count of Neighborhood Sales</h3>
+              <hr class="analysis-heading-divider" />
+              <p>
+                In the table to the right, we track the number of property sales in
+                each neighborhood from 2022 to 2024, this data reveals activity
+                levels and market dynamics, offering a clear view of shifting demand
+                and neighborhood popularity over time.
+              </p>
+              <p class="note">
+                *Sales data from 2024 only covers January-April and
+              does not reflect activity in the market over an entire year.
+              </p>
+
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover table-sm">
+                  <thead>
+                    <tr>
+                      <th class="region">Neighborhood</th>
+                      <th>Count in 2022</th>
+                      <th>Count in 2023</th>
+                      <th>Count in 2024</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="region">Camden</td>
+                      <td>54</td>
+                      <td>43</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Chelsea</td>
+                      <td>42</td>
+                      <td>45</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Greenwich</td>
+                      <td>41</td>
+                      <td>44</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Islington</td>
+                      <td>38</td>
+                      <td>45</td>
+                      <td>14</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Kensington</td>
+                      <td>43</td>
+                      <td>57</td>
+                      <td>14</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Marylebone</td>
+                      <td>49</td>
+                      <td>48</td>
+                      <td>16</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Notting Hill</td>
+                      <td>40</td>
+                      <td>44</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Shoreditch</td>
+                      <td>38</td>
+                      <td>46</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Soho</td>
+                      <td>39</td>
+                      <td>48</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td class="region">Westminster</td>
+                      <td>35</td>
+                      <td>51</td>
+                      <td>12</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="row">
+      <div class="row">
+        <div class="col-lg-2">
+          <hr>
+          <h5>McGill University</h5>
+          <p>MCGR331 Winter 2025, Assignment 2</p>
+        </div>
+
+        <div class="col-lg-3">
+          <hr>
+          <h5>Group 19:</h5>
+          <p>Diana C., Aymeric F. and Veronica M.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
