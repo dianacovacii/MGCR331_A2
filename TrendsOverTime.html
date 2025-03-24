@@ -1,232 +1,212 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inder&display=swap"
-      rel="stylesheet"
-    />
 
-    <style>
-      .btn {
-        border: 1px solid black;
-        padding: 5px;
-        display: inline-block;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #e1e5f2;
-      }
-      .btn:hover {
-        background-color: #d1d8ef;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body,
-      html {
-        overflow-x: hidden;
-        width: 100%;
-        height: 100%;
-        font-family: "Inder", sans-serif;
-      }
-      .row {
-        padding-right: 50px;
-        padding-left: 50px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-      .oddSection {
-        background-color: #e1e5f2;
-      }
-      .evenSection {
-        background-color: white;
-      }
-      .subText {
-        color: #022b3a;
-        letter-spacing: 1px;
-        font-size: 20px;
-      }
-      .line {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 100px;
-        border-top: 1px solid black;
-      }
-      .header {
-        background-color: #022b3a;
-        padding: 50px;
-        padding-top: 30px;
-        color: white;
-      }
-      .nav {
-        background-color: #022b3a;
-        padding:10px;
-      }
-      .sectionHeader {
-        font-size: 36px;
-      }
-      .centered {
-        text-align: center;
-      }
-      .note {
-        font-size: 16px;
-        padding-top: 60px;
-      }
-      .img-fluid:hover {
-        transform: translate(-50%, 0%) scale(1.3);
-        z-index: 6;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        margin: auto;
-      }
-      .img:hover {
-        transform: scale(1.3);
-        z-index: 6;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        margin: auto;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row nav"> 
-        <div class="col-sm-12">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active" >
-                    <a class="nav-link btn" href="PerformingProperties.html"
-                      >Top & Bottom Properties
-                      <span class="sr-only">(current)</span></a
-                    >
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link btn" href="Neighborhood.html"
-                    >Regional Sales Performance<span class="sr-only"
-                      >(current)</span
-                    ></a
-                  >
-                </li>  
-                <li class="nav-item active">
-                  <a class="nav-link btn" href="TrendsOverTime.html"
-                    >Trends Over Time<span class="sr-only">(current)</span></a
-                  >
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet" />
+
+  <style>
+    .btn {
+      border: 1px solid black;
+      padding: 5px;
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-color: #e1e5f2;
+    }
+
+    .btn:hover {
+      background-color: #d1d8ef;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+      font-family: "Inder", sans-serif;
+    }
+
+    .row {
+      padding-right: 50px;
+      padding-left: 50px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .oddSection {
+      background-color: #e1e5f2;
+    }
+
+    .evenSection {
+      background-color: white;
+    }
+
+    .subText {
+      color: #022b3a;
+      letter-spacing: 1px;
+      font-size: 20px;
+    }
+
+    .line {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100px;
+      border-top: 1px solid black;
+    }
+
+    .header {
+      background-color: #022b3a;
+      padding: 50px;
+      padding-top: 30px;
+      color: white;
+    }
+
+    .nav {
+      background-color: #022b3a;
+      padding: 10px;
+    }
+
+    .sectionHeader {
+      font-size: 36px;
+    }
+
+    .centered {
+      text-align: center;
+    }
+
+    .note {
+      font-size: 16px;
+      padding-top: 60px;
+    }
+
+    .img-fluid:hover {
+      transform: translate(-50%, 0%) scale(1.3);
+      z-index: 6;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      margin: auto;
+    }
+
+    .img:hover {
+      transform: scale(1.3);
+      z-index: 6;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row nav">
+      <div class="col-sm-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link btn" href="PerformingProperties.html">Top & Bottom Properties
+                  <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link btn" href="Neighborhood.html">Regional Sales Performance<span
+                    class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link btn" href="TrendsOverTime.html">Trends Over Time<span
+                    class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <div class="row header">
-        <div class="col-sm-12">
-          <h1 class="centered" style="font-size: 50px">Trends Over Time</h1>
-          <hr
-            class="line"
-            style="
+    </div>
+    <div class="row header">
+      <div class="col-sm-12">
+        <h1 class="centered" style="font-size: 50px">Trends Over Time</h1>
+        <hr class="line" style="
               border-top: 1px solid white;
               width: 130px;
               margin-left: auto;
               margin-right: auto;
-            "
-          />
-          <p
-            class="subText centered"
-            style="color: white; width: 50%; margin: auto"
-          >
-            Highlighting trends and patterns in British real estate from 2022 to
-            2024 across various neighborhoods.
-          </p>
-        </div>
-      </div>
-      <div class="row oddSection">
-        <div class="col-sm-6">
-          <h3 class="sectionHeader">Average House Prices By Neighborhood</h3>
-          <hr class="line" />
-          <p class="subText">
-            In the chart to the right, we can observe the average price of a
-            house in a neighborrhood and the changes this value has over a three
-            year period. This reflects key market trends over time, providing a
-            representative view of price fluctuations and regional dynamics.
-          </p>
-        </div>
-        <div class="col-sm-6">
-          <img
-            src="charts/TrendsOverTime_Chart1.png"
-            alt="Average House Prices by Neighborhood (2022-2024)"
-            class="img-fluid"
-          />
-        </div>
-      </div>
-      <div class="row evenSection">
-        <div class="col-sm-12">
-          <h3 class="sectionHeader centered">
-            Square Footage vs. Building Age
-          </h3>
-          <hr class="line" style="margin-left: auto; margin-right: auto" />
-          <p class="subText centered">
-            In the chart below, we can visualize the relationship between
-            property size and building age, this data highlights how square
-            footage trends vary acorss different age ranges, offering insights
-            into construction patterns and preferences over time.
-          </p>
-          <img
-            src="charts/TrendsOverTime_Chart2.png"
-            alt="Trends in Building Age and Square Footage"
-            class="img"
-            style="max-width: 80%; display: block; margin: 0 auto"
-          />
-        </div>
-      </div>
-      <div class="row oddSection">
-        <div class="col-sm-6">
-          <h3 class="sectionHeader">Neighborhood Sales Trend</h3>
-          <hr class="line" />
-          <p class="subText">
-            In the chart to the right, we track the number of property sales in
-            each neighborhood for 2022 and 2023, this data reveals activity
-            levels and market dynamics, offering a clear view of shifting demand
-            and neighborhood popularity over time.
-          </p>
-          <p class="note">
-            *Sales data from 2024 is excluded as it only cover January-April and
-            does not reflect the entire year.
-          </p>
-        </div>
-        <div class="col-sm-6">
-          <img
-            src="charts/TrendsOverTime_Chart3.png"
-            alt="Number of Sales by Neighborhood (2022-2023)"
-            class="img-fluid"
-          />
-        </div>
-      </div>
-      <div class="row oddSection">
-        <hr
-          class="line"
-          style="width: 80%; margin-left: auto; margin-right: auto"
-        />
+            " />
+        <p class="subText centered" style="color: white; width: 50%; margin: auto">
+          Highlighting trends and patterns in British real estate from 2022 to
+          2024 across various neighborhoods.
+        </p>
       </div>
     </div>
-  </body>
+    <div class="row oddSection">
+      <div class="col-sm-6">
+        <h3 class="sectionHeader">Average House Prices By Neighborhood</h3>
+        <hr class="line" />
+        <p class="subText">
+          In the chart to the right, we can observe the average price of a
+          house in a neighborrhood and the changes this value has over a three
+          year period. This reflects key market trends over time, providing a
+          representative view of price fluctuations and regional dynamics.
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <img src="charts/TrendsOverTime_Chart1.png" alt="Average House Prices by Neighborhood (2022-2024)"
+          class="img-fluid" />
+      </div>
+    </div>
+    <div class="row evenSection">
+      <div class="col-sm-12">
+        <h3 class="sectionHeader centered">
+          Square Footage vs. Building Age
+        </h3>
+        <hr class="line" style="margin-left: auto; margin-right: auto" />
+        <p class="subText centered">
+          In the chart below, we can visualize the relationship between
+          property size and building age, this data highlights how square
+          footage trends vary acorss different age ranges, offering insights
+          into construction patterns and preferences over time.
+        </p>
+        <img src="charts/TrendsOverTime_Chart2.png" alt="Trends in Building Age and Square Footage" class="img"
+          style="max-width: 80%; display: block; margin: 0 auto" />
+      </div>
+    </div>
+    <div class="row oddSection">
+      <div class="col-sm-6">
+        <h3 class="sectionHeader">Neighborhood Sales Trend</h3>
+        <hr class="line" />
+        <p class="subText">
+          In the chart to the right, we track the number of property sales in
+          each neighborhood for 2022 and 2023, this data reveals activity
+          levels and market dynamics, offering a clear view of shifting demand
+          and neighborhood popularity over time.
+        </p>
+        <p class="note">
+          *Sales data from 2024 is excluded as it only cover January-April and
+          does not reflect the entire year.
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <img src="charts/TrendsOverTime_Chart3.png" alt="Number of Sales by Neighborhood (2022-2023)"
+          class="img-fluid" />
+      </div>
+    </div>
+    <div class="row oddSection">
+      <hr class="line" style="width: 80%; margin-left: auto; margin-right: auto" />
+    </div>
+  </div>
+</body>
+
 </html>
