@@ -1,212 +1,334 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Trends Over Time</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inder&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #fff;
+        overflow-x:hidden;
+      }
+      .row nav {
+        background-color: #022b3a;
+      }
+      .btn {
+        border: 1px solid black;
+        padding: 5px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: #e1e5f2;
+      }
+      .btn:hover {
+        background-color: #d1d8ef;
+      }
+      .header {
+        text-align: center;
+        background-color: #022b3a;
+        color: #fff;
+      }
+      .header hr {
+        width: 10em;
+        border: 0.15em #fff solid;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Inder", sans-serif;
+      }
+      h3 {
+        color: #1f7a8c;
+        font-size: large;
+      }
+      p {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+      }
+      .analysis-heading-divider {
+        width: 4em;
+        border: 0.1em solid;
+        margin: 2em 0 2em 0;
+      }
+      .analysis-1 hr {
+        color: #022b3a;
+      }
+      .analysis-2 {
+        background-color: #1f7a8c;
+        color: #fff;
+      }
+      .analysis-2 h3 {
+        color: #e1e5f2;
+      }
+      .analysis-2 hr {
+        color: #fff;
+      }
+      .analysis-4 {
+        background-color: #dbe9f5;
+      }
+      .img-fluid:hover {
+        transform: translate(-50%, 0%) scale(1.3);
+        z-index: 6;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        margin: auto;
+      }
+      .img:hover {
+        transform: scale(1.3);
+        z-index: 6;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        margin: auto;
+      }
+      .note{
+        font-size:10px; 
+        padding-top:50px;
+        padding-bottom:10px;
+      }
+      tr:nth-child(even){
+        background-color: #e1e5f2;
+      }
+      th, td{
+        text-align:right; 
+        padding:6px 15px; 
+        white-space:nowrap; 
+      }
+      thead{
+        background-color: #d1d8ef;
+      }
+      .region{
+        text-align:left;
+      }
+      .footer{
+        background-color:white; 
+        text-align:center;
+        border-top:1px solid grey; 
+        padding-top: 20px;
+        color:#022b3a;
+      }
+    </style>
+  </head>
 
-  <style>
-    .btn {
-      border: 1px solid black;
-      padding: 5px;
-      display: inline-block;
-      margin-left: 5px;
-      margin-right: 5px;
-      background-color: #e1e5f2;
-    }
-
-    .btn:hover {
-      background-color: #d1d8ef;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body,
-    html {
-      overflow-x: hidden;
-      width: 100%;
-      height: 100%;
-      font-family: "Inder", sans-serif;
-    }
-
-    .row {
-      padding-right: 50px;
-      padding-left: 50px;
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-
-    .oddSection {
-      background-color: #e1e5f2;
-    }
-
-    .evenSection {
-      background-color: white;
-    }
-
-    .subText {
-      color: #022b3a;
-      letter-spacing: 1px;
-      font-size: 20px;
-    }
-
-    .line {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      width: 100px;
-      border-top: 1px solid black;
-    }
-
-    .header {
-      background-color: #022b3a;
-      padding: 50px;
-      padding-top: 30px;
-      color: white;
-    }
-
-    .nav {
-      background-color: #022b3a;
-      padding: 10px;
-    }
-
-    .sectionHeader {
-      font-size: 36px;
-    }
-
-    .centered {
-      text-align: center;
-    }
-
-    .note {
-      font-size: 16px;
-      padding-top: 60px;
-    }
-
-    .img-fluid:hover {
-      transform: translate(-50%, 0%) scale(1.3);
-      z-index: 6;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      margin: auto;
-    }
-
-    .img:hover {
-      transform: scale(1.3);
-      z-index: 6;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      margin: auto;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container-fluid">
+  <body>
+    <!-- Navigation Bar -->
     <div class="row nav">
       <div class="col-sm-12">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link btn" href="PerformingProperties.html">Top & Bottom Properties
-                  <span class="sr-only">(current)</span></a>
+                <a class="nav-link btn" href="PerformingProperties.html"
+                  >Top & Bottom Properties
+                  <span class="sr-only"></span></a
+                >
               </li>
               <li class="nav-item active">
-                <a class="nav-link btn" href="Neighborhood.html">Regional Sales Performance<span
-                    class="sr-only">(current)</span></a>
+                <a class="nav-link btn" href="Neighborhood.html"
+                  >Regional Sales Performance<span class="sr-only"></span
+                ></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link btn" href="TrendsOverTime.html">Trends Over Time<span
-                    class="sr-only">(current)</span></a>
+                <a class="nav-link btn" href="TrendsOverTime.html"
+                  >Trends Over Time<span class="sr-only">(current)</span
+                ></a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </div>
-    <div class="row header">
-      <div class="col-sm-12">
-        <h1 class="centered" style="font-size: 50px">Trends Over Time</h1>
-        <hr class="line" style="
-              border-top: 1px solid white;
-              width: 130px;
-              margin-left: auto;
-              margin-right: auto;
-            " />
-        <p class="subText centered" style="color: white; width: 50%; margin: auto">
-          Highlighting trends and patterns in British real estate from 2022 to
-          2024 across various neighborhoods.
-        </p>
-      </div>
-    </div>
-    <div class="row oddSection">
-      <div class="col-sm-6">
-        <h3 class="sectionHeader">Average House Prices By Neighborhood</h3>
-        <hr class="line" />
-        <p class="subText">
-          In the chart to the right, we can observe the average price of a
-          house in a neighborrhood and the changes this value has over a three
-          year period. This reflects key market trends over time, providing a
-          representative view of price fluctuations and regional dynamics.
-        </p>
-      </div>
-      <div class="col-sm-6">
-        <img src="charts/TrendsOverTime_Chart1.png" alt="Average House Prices by Neighborhood (2022-2024)"
-          class="img-fluid" />
-      </div>
-    </div>
-    <div class="row evenSection">
-      <div class="col-sm-12">
-        <h3 class="sectionHeader centered">
-          Square Footage vs. Building Age
-        </h3>
-        <hr class="line" style="margin-left: auto; margin-right: auto" />
-        <p class="subText centered">
-          In the chart below, we can visualize the relationship between
-          property size and building age, this data highlights how square
-          footage trends vary acorss different age ranges, offering insights
-          into construction patterns and preferences over time.
-        </p>
-        <img src="charts/TrendsOverTime_Chart2.png" alt="Trends in Building Age and Square Footage" class="img"
-          style="max-width: 80%; display: block; margin: 0 auto" />
-      </div>
-    </div>
-    <div class="row oddSection">
-      <div class="col-sm-6">
-        <h3 class="sectionHeader">Neighborhood Sales Trend</h3>
-        <hr class="line" />
-        <p class="subText">
-          In the chart to the right, we track the number of property sales in
-          each neighborhood for 2022 and 2023, this data reveals activity
-          levels and market dynamics, offering a clear view of shifting demand
-          and neighborhood popularity over time.
-        </p>
-        <p class="note">
-          *Sales data from 2024 is excluded as it only cover January-April and
-          does not reflect the entire year.
-        </p>
-      </div>
-      <div class="col-sm-6">
-        <img src="charts/TrendsOverTime_Chart3.png" alt="Number of Sales by Neighborhood (2022-2023)"
-          class="img-fluid" />
-      </div>
-    </div>
-    <div class="row oddSection">
-      <hr class="line" style="width: 80%; margin-left: auto; margin-right: auto" />
-    </div>
-  </div>
-</body>
 
+    <!-- Page Header -->
+    <div class="container header col-12">
+      <div class="row d-flex justify-content-center">
+        <div>
+          <div class="pt-5 pb-5">
+            <h1>Trends Over Time</h1>
+            <hr />
+            <p>
+              Highlighting trends and patterns in British real estate from 2022 to
+            2024 across various neighborhoods.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis 1 -->
+    <div class="container-fluid analysis-1 pt-5 pb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+          <h2>Average House Price Progression</h2>
+            <h3>by Neighborhood</h3>
+            <hr class="analysis-heading-divider" />
+            <p>
+              In the chart below, we observe the average price of a
+              house in a neighborrhood and the changes this value has over a three
+              year period. This reflects key market trends over time, providing a
+              representative view of price fluctuations and regional dynamics.  
+            </p>
+            <img
+              class="w-100 pt-3 pb-3 img img-fluid"
+              src="./charts/TrendsOverTime_Chart1.png"
+              alt="Average House Prices by Neighborhood (2022-2024)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis 2 -->
+    <div class="container-fluid analysis-2 pt-5 pb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+          <div class="pt-5 pb-5">
+            <h2>Building Age and Size Trend</h2>
+            <h3>by Square Footage and Building Age Comparison</h3>
+            <hr class="analysis-heading-divider" />
+            <p>
+              In the chart below, we can visualize the relationship between
+            property size and building age, this data highlights how square
+            footage trends vary acorss different age ranges, offering insights
+            into construction patterns and preferences over time.
+          </p>
+          <img
+              class="w-100 pt-3 pb-3 img img-fluid"
+              src="./charts/TrendsOverTime_Chart2.png"
+              alt="Trends in Building Age and Square Footage"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis 3 -->
+    <div class="container-fluid analysis-3 pt-5 pb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+          <div class="pt-5 pb-5">
+            <h2>Neighborhood Sales Trend</h2>
+            <h3>by Count of Neighborhood Sales</h3>
+            <hr class="analysis-heading-divider" />
+            <p>
+              In the table to the right, we track the number of property sales in
+              each neighborhood from 2022 to 2024, this data reveals activity
+              levels and market dynamics, offering a clear view of shifting demand
+              and neighborhood popularity over time.
+            </p>
+            <p class="note">
+              *Sales data from 2024 only covers January-April and
+            does not reflect activity in the market over an entire year.
+            </p>
+
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover table-sm">
+                <thead>
+                  <tr>
+                    <th class="region">Neighborhood</th>
+                    <th>Count in 2022</th>
+                    <th>Count in 2023</th>
+                    <th>Count in 2024</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="region">Camden</td>
+                    <td>54</td>
+                    <td>43</td>
+                    <td>9</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Chelsea</td>
+                    <td>42</td>
+                    <td>45</td>
+                    <td>7</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Greenwich</td>
+                    <td>41</td>
+                    <td>44</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Islington</td>
+                    <td>38</td>
+                    <td>45</td>
+                    <td>14</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Kensington</td>
+                    <td>43</td>
+                    <td>57</td>
+                    <td>14</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Marylebone</td>
+                    <td>49</td>
+                    <td>48</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Notting Hill</td>
+                    <td>40</td>
+                    <td>44</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Shoreditch</td>
+                    <td>38</td>
+                    <td>46</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Soho</td>
+                    <td>39</td>
+                    <td>48</td>
+                    <td>9</td>
+                  </tr>
+                  <tr>
+                    <td class="region">Westminster</td>
+                    <td>35</td>
+                    <td>51</td>
+                    <td>12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-fluid footer">
+      <p>McGill University, MGCR331 Winter2025 Assignment 2</p>
+      <p>Group 19: Diana Covaci, Veronica Marallag, Aymeric Flaig</p>
+    </div>
+  </body>
 </html>
