@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Neighborhood Housing Market performance</title>
+    <title>Regional Housing Market performance</title>
     <style>
       .container {
         display: block;
@@ -133,6 +133,14 @@
         </p>
       </div>
     </div>
+    <form>
+        <h3>We value your feedback!</h3>
+        <label for="Question1">Which city should we do next?</label><br>
+        <input type="text" id="Question" name="Question"><br>
+        <label for="Question2"> Do you have any questions?</label><br>
+        <input type="text" id="Question2" name="Question2"><br>
+        <button type="submit">Submit</button>
+    </form>
   </body>
 
   <style>
@@ -176,6 +184,37 @@
       margin-left: 5px;
       margin-right: 5px;
       background-color: #e1e5f2;
+    }
+    h3{
+        color: #1a5173;
+      font-family: "Inder", sans-serif;
+      font-size: 25px;
+      font-weight: medium;
+      text-align: center;
+
+    }
+    form{
+        text-align: center;
+        margin: auto;
+        width: 300px;
+        padding: 10px;
+        bottom: 20px;
+        left: 50%
+    }
+    button {
+        background: #1A5173;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input {
+        width: 50%;
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #93b4e5;
+        border-radius: 5px;
     }
   </style>
 </html>
