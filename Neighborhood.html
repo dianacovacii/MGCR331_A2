@@ -1,44 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Regional Housing Market performance</title>
-    <style>
-      .container {
-        display: block;
-        padding: 40px;
-      }
-      .section {
-        background-color: #6280cc;
-        color: white;
-        padding: 40px;
-        margin: 20px 0;
-        text-align: center;
-        border-radius: 10px;
-      }
-      .section img {
-        width: 70%;
-        border-radius: 5px;
-        margin-bottom: 15px;
-      }
-      .section h2 {
-        margin-bottom: 10px;
-      }
-      .img:hover {
-        transform: scale(1.5);
-        z-index: 6;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        margin: auto;
-      }
-      .img-fluid:hover {
-        transform: scale(1.3);
-        z-index: 6;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        margin: auto;
-      }
-    </style>
-
+    <title>Top and Bottom-Performing Properties</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -51,9 +14,119 @@
       href="https://fonts.googleapis.com/css2?family=Inder&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #fff;
+      }
+      .row nav {
+        background-color: #022b3a;
+      }
+      .btn {
+        border: 1px solid black;
+        padding: 5px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: #e1e5f2;
+      }
+      .btn:hover {
+        background-color: #d1d8ef;
+      }
+      .header {
+        text-align: center;
+        background-color: #022b3a;
+        color: #fff;
+      }
+      .header hr {
+        width: 10em;
+        border: 0.15em #fff solid;
+      }
+      .header p {
+        color: #fff;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Inder", sans-serif;
+      }
+      h3 {
+        color: #1f7a8c;
+        font-size: large;
+      }
+      p {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: #022b3a;
+      }
+      .analysis-heading-divider {
+        width: 4em;
+        border: 0.1em solid;
+        margin: 2em 0 2em 0;
+      }
+      .analysis-1 hr {
+        color: #022b3a;
+      }
+      .analysis-2 {
+        background-color: #1f7a8c;
+        color: #fff;
+      }
+      .analysis-2 p {
+        color: #fff;
+      }
+      .analysis-2 h3 {
+        color: #e1e5f2;
+      }
+      .analysis-2 hr {
+        color: #fff;
+     
+      }
+      .img-fluid:hover {
+        transform: translate(-50%, 0%) scale(1.3);
+        z-index: 6;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        margin: auto;
+      }
+      .img:hover {
+        transform: scale(1.3);
+        z-index: 6;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        margin: auto;
+      }
+      form{
+        text-align: center;
+        margin: auto;
+        width: 300px;
+        padding: 10px;
+        bottom: 20px;
+        left: 50%
+      }
+      button {
+        background: #1A5173;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input {
+        width: 50%;
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #93b4e5;
+        border-radius: 5px;
+    }
+    </style>
   </head>
 
   <body>
+    <!-- Navigation Bar -->
     <div class="row nav">
       <div class="col-sm-12">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -78,15 +151,13 @@
               </li>
               <li class="nav-item active">
                 <a class="nav-link btn" href="Neighborhood.html"
-                  >Regional Sales Performance<span class="sr-only"
-                    >(current)</span
-                  ></a
-                >
+                  >Regional Sales Performance<span class="sr-only"></span
+                ></a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link btn" href="TrendsOverTime.html"
-                  >Trends Over Time<span class="sr-only">(current)</span></a
-                >
+                  >Trends Over Time<span class="sr-only"></span
+                ></a>
               </li>
             </ul>
           </div>
@@ -94,43 +165,95 @@
       </div>
     </div>
 
-    <h5>Regional Housing Market performance</h5>
-    <h1>
-      An analysis of the housing market performance across various
-      neighborhoods, highlighting key metrics such as sales speed, market share,
-      and property characteristics.
-    </h1>
-    <div class="container">
-      <div class="section">
-        <h2>Average time on market per neighborhood</h2>
-        <img src="charts/Graph 1 IT.png" alt="Graph 1" class="img-fluid" />
-        <p>
-          The chart above highlights that properties in the London neighborhoods
-          of Shoreditch, Chelsea, and Westminster experience the quickest sales,
-          while Greenwich shows the longest time on the market, followed closely
-          by Notting Hill. This trend indicates that the unique characteristics
-          and demand within each neighborhood significantly impact sales speed.
-        </p>
+    <!-- Page Header -->
+    <div class="container header col-12">
+      <div class="row d-flex justify-content-center">
+        <div>
+          <div class="pt-5 pb-5">
+            <h1>Regional Housing Market performance</h1>
+            <hr />
+            <p>
+                An analysis of the housing market performance across various
+                neighborhoods, highlighting key metrics such as sales speed, market share,
+                and property characteristics.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="section">
-        <h2>Market share by neighborhood</h2>
-        <img src="charts/Graph 2 IT.png" alt="Graph 2" class="img-fluid" />
-        <p>
-          The pie chart above shows that in 2023, Kensington held the largest
-          market share in total sales value, followed by Westminster and
-          Chelsea. These neighborhoods dominate the market, reflecting their
-          higher property values and strong demand among buyers.
-        </p>
+    </div>
+
+    <!-- Analysis 1 -->
+    <div class="container-fluid analysis-1 pt-5 pb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+          <div class="pt-5 pb-5">
+            <h2>Average time on market per neighborhood</h2>
+            <hr class="analysis-heading-divider" />
+            <p>
+                The chart above highlights that properties in the London neighborhoods
+                of Shoreditch, Chelsea, and Westminster experience the quickest sales,
+                while Greenwich shows the longest time on the market, followed closely
+                by Notting Hill. This trend indicates that the unique characteristics
+                and demand within each neighborhood significantly impact sales speed.
+            </p>
+
+            <img
+              class="img-fluid"
+              src="charts/Graph 1 IT.png"
+              alt="Graph 1"
+            />
+          </div>
+        </div>
       </div>
-      <div class="section">
-        <h2>Average number of bedrooms per neighborhood</h2>
-        <img src="charts/Graoh 3 IT.png" alt="Graph 3" class="img-fluid" />
-        <p>
-          The graph above shows that Camden, Kensington, and Shoreditch have the
-          highest average number of bedrooms (more than 3.1 on average). This
-          suggests that these neighborhoods tend to feature larger properties
-          compared to others in the market.
-        </p>
+    </div>
+
+    <!-- Analysis 2 -->
+    <div class="container-fluid analysis-2 pt-5 pb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+          <div class="pt-5 pb-5">
+            <h2>Market share by neighborhood</h2>
+            <hr class="analysis-heading-divider" />
+            <p>
+                      The pie chart above shows that in 2023, Kensington held the largest
+                      market share in total sales value, followed by Westminster and
+                      Chelsea. These neighborhoods dominate the market, reflecting their
+                      higher property values and strong demand among buyers.</p>
+
+            <img
+              class="img-fluid"
+              src="charts/Graph 2 IT.png"
+              alt="Graph 2"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis 3 -->
+    <div class="container-fluid analysis-3 pt-5 pb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-5">
+          <div class="pt-5 pb-5 pl-5">
+            <h2>Most Frequent Property Views</h2>
+            <h3>by Count of Property View</h3>
+            <hr class="analysis-heading-divider" />
+            <p>
+                  The graph above shows that Camden, Kensington, and Shoreditch have the
+                  highest average number of bedrooms (more than 3.1 on average). This
+                  suggests that these neighborhoods tend to feature larger properties
+                  compared to others in the market.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-3 pt-5 pr-5">
+          <img
+            class="img-fluid"
+            src="charts/Graoh 3 IT.png"
+            alt="Graph 3"
+          />
+        </div>
       </div>
     </div>
     <form>
@@ -139,82 +262,13 @@
         <input type="text" id="Question" name="Question"><br>
         <label for="Question2"> Do you have any questions?</label><br>
         <input type="text" id="Question2" name="Question2"><br>
+        <label for="feedback">Would you recommend our website to your friends?</label><br>
+        <select id="feedback" name="feedback">
+            <option value="Great">Yes</option>
+            <option value="Good">Maybe</option>
+            <option value="Needs Improvement">Needs Improvement</option>
+        </select><br>
         <button type="submit">Submit</button>
     </form>
   </body>
-
-  <style>
-    body {
-      background-color: #dbe9f5;
-    }
-    h5 {
-      color: #6290cc;
-      font-family: "Inder", sans-serif;
-      font-size: 55px;
-      font-weight: Extra Bold;
-      text-align: center;
-    }
-
-    h1 {
-      color: #1a5173;
-      font-family: "Inder", sans-serif;
-      font-size: 20px;
-      font-weight: medium;
-      text-align: center;
-    }
-
-    h2 {
-      color: white;
-      font-family: "Inder", sans-serif;
-      font-size: 35px;
-      font-weight: extra bold;
-      text-align: center;
-    }
-    p {
-      color: #1a5173;
-      font-family: "Inder", sans-serif;
-      font-size: 25px;
-      font-weight: medium;
-      text-align: center;
-    }
-    .btn {
-      border: 1px solid black;
-      padding: 5px;
-      display: inline-block;
-      margin-left: 5px;
-      margin-right: 5px;
-      background-color: #e1e5f2;
-    }
-    h3{
-        color: #1a5173;
-      font-family: "Inder", sans-serif;
-      font-size: 25px;
-      font-weight: medium;
-      text-align: center;
-
-    }
-    form{
-        text-align: center;
-        margin: auto;
-        width: 300px;
-        padding: 10px;
-        bottom: 20px;
-        left: 50%
-    }
-    button {
-        background: #1A5173;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    input {
-        width: 50%;
-        padding: 8px;
-        margin: 5px 0;
-        border: 1px solid #93b4e5;
-        border-radius: 5px;
-    }
-  </style>
 </html>
