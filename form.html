@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <Body>
+        <form>
+            <h3>We value your feedback!</h3>
+            <label for="Question1">Which city should we do next?</label><br>
+            <input type="text" id="Question" name="Question"><br>
+            <label for="Question2"> Do you have any questions?</label><br>
+            <input type="text" id="Question2" name="Question2"><br>
+            <label for="feedback">Would you recommend our website to your friends?</label><br>
+            <select id="feedback" name="feedback">
+                <option value="Great">Yes</option>
+                <option value="Good">Maybe</option>
+                <option value="Needs Improvement">Needs Improvement</option>
+            </select><br>
+            <div>
+                <div class="radio-group">
+                    <label>Which continent are you reading this from?</label>
+                    <div>
+                        <input type="radio" id="asia" name="continent" value="Asia">
+                        <label for="asia">Asia</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="europe" name="continent" value="Europe">
+                        <label for="europe">Europe</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="north-america" name="continent" value="North America">
+                        <label for="north-america">North America</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="south-america" name="continent" value="South America">
+                        <label for="south-america">South America</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="africa" name="continent" value="Africa">
+                        <label for="africa">Africa</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="oceania" name="continent" value="Oceania">
+                        <label for="oceania">Oceania</label>
+                    </div>
+                </div>
+            <button type="submit">Submit</button>
+            
+        </form>
+    </Body>
+    
+    <style>
+    form{
+        text-align: center;
+        margin: auto;
+        width: 300px;
+        padding: 10px;
+        bottom: 20px;
+        left: 50%;
+        font-family: 'Inter', sans-serif;
+        color: darkblue;
+      }
+      button {
+        background: #1A5173;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input {
+        width: 50%;
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #93b4e5;
+        border-radius: 5px;
+    }
+    .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+    .radio-group div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    }
+    </style>
+</html>

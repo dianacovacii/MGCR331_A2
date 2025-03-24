@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Regional Housing Market Performance</title>
+    <title>Top and Bottom-Performing Properties</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -83,7 +83,9 @@
       }
       .analysis-2 hr {
         color: #fff;
-     
+      }
+      .analysis-4 {
+        background-color: #dbe9f5;
       }
       .img-fluid:hover {
         transform: translate(-50%, 0%) scale(1.3);
@@ -99,7 +101,6 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         margin: auto;
       }
-      
     </style>
   </head>
 
@@ -148,12 +149,11 @@
       <div class="row d-flex justify-content-center">
         <div>
           <div class="pt-5 pb-5">
-            <h1>Regional Housing Market performance</h1>
+            <h1>Top and Bottom-Performing Properties</h1>
             <hr />
             <p>
-                An analysis of the housing market performance across various
-                neighborhoods, highlighting key metrics such as sales speed, market share,
-                and property characteristics.
+              Analyzing the Extremes: Top and Bottom Data Insights in British
+              real estate from 2022 to 2024.
             </p>
           </div>
         </div>
@@ -165,21 +165,24 @@
       <div class="row d-flex justify-content-center">
         <div class="col-6">
           <div class="pt-5 pb-5">
-            <h2>Average time on market</h2>
-            <h3>by neighborhood</h3>
+            <h2>Most and Least Expensive Neighbourhoods</h2>
+            <h3>by Average Property Price</h3>
             <hr class="analysis-heading-divider" />
             <p>
-                The chart below highlights that properties in the London neighborhoods
-                of Shoreditch, Chelsea, and Westminster experience the quickest sales,
-                while Greenwich shows the longest time on the market, followed closely
-                by Notting Hill. This trend indicates that the unique characteristics
-                and demand within each neighborhood significantly impact sales speed.
+              The illustrated bar chart below compares the average property
+              price across different neighbourhoods. The descending order of the
+              bars identify the most expensive neighbourhoods across the British
+              real estate from 2022 to 2024.
+            </p>
+            <p>
+              According to results, the most expensive neighbourhood is Chelsea.
+              The least expensive neighbourhoods is Greenwich.
             </p>
 
             <img
-              class="img-fluid"
-              src="charts/Graph 1 IT.png"
-              alt="Graph 1"
+              class="w-100 pt-3 pb-3 img img-fluid"
+              src="./charts/PropertyPerformance_Chart1.png"
+              alt="Neighborhoods by Average Property Value"
             />
           </div>
         </div>
@@ -191,19 +194,24 @@
       <div class="row d-flex justify-content-center">
         <div class="col-6">
           <div class="pt-5 pb-5">
-            <h2>Market share by neighborhood</h2>
-            <h3>By neighborhood</h3>
+            <h2>Top 3 Most Common Property Sizes</h2>
+            <h3>by Square Meter Range</h3>
             <hr class="analysis-heading-divider" />
             <p>
-                      The pie chart below shows that in 2023, Kensington held the largest
-                      market share in total sales value, followed by Westminster and
-                      Chelsea. These neighborhoods dominate the market, reflecting their
-                      higher property values and strong demand among buyers.</p>
+              The illustrated bar chart below identifies which property size
+              ranges are performing the best. This means understanding whether
+              larger properties or smaller properties are in higher demand.
+            </p>
+            <p>
+              Analyzing the bar chart shows that most residents own a property
+              in these top 3 ranges: 70-89 sq. meters., 190-209 sq. meters and
+              90-109 sq. meters.
+            </p>
 
             <img
-              class="img-fluid"
-              src="charts/Graph 2 IT.png"
-              alt="Graph 2"
+              class="w-100 pt-3 pb-3 img img-fluid"
+              src="./charts/PropertyPerformance_Chart2.png"
+              alt="Property Size Distribution by Square Meter Range"
             />
           </div>
         </div>
@@ -215,24 +223,63 @@
       <div class="row d-flex justify-content-center">
         <div class="col-5">
           <div class="pt-5 pb-5 pl-5">
-            <h2>Average number of bedrooms</h2>
-            <h3>by Neighborhood</h3>
+            <h2>Most Frequent Property Views</h2>
+            <h3>by Count of Property View</h3>
             <hr class="analysis-heading-divider" />
             <p>
-                  The graph on the right shows that Camden, Kensington, and Shoreditch have the
-                  highest average number of bedrooms (more than 3.1 on average). This
-                  suggests that these neighborhoods tend to feature larger properties
-                  compared to others in the market.
+              The pie chart on the right helps shift marketing efforts toward
+              these popular listings. For example, if a specific property type
+              or neighbourhood has high viewership, targeted ads or promotional
+              materials can be tailored to highlight these features.
+            </p>
+            <p>
+              Analysis shows that the Sea and Garden are the most people have
+              the view of the Sea or the Garden. The Street is the least popular
+              view type.
             </p>
           </div>
         </div>
 
         <div class="col-3 pt-5 pr-5">
           <img
+            class="img img-fluid"
+            src="./charts/PropertyPerformance_Chart3.png"
+            alt="Neighborhoods by Average Property Value"
             class="img-fluid"
-            src="charts/Graoh 3 IT.png"
-            alt="Graph 3"
           />
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis 4 -->
+    <div class="container-fluid analysis-4 pt-5 pb-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+          <div class="pt-5 pb-5">
+            <h2>Most Common Property Types</h2>
+            <h3>by Count of Property Types</h3>
+            <hr class="analysis-heading-divider" />
+            <p>
+              Knowing the most common property types helps identify what types
+              of properties are in highest demand. This can guide developers,
+              real estate agents, and investors in understanding which property
+              types (e.g., apartments, houses, townhouses) people are most
+              interested in.
+            </p>
+            <p>
+              The bar chart below reveals trends from 2022 to 2024, highlighting
+              that apartments have consistently been the least owned property
+              type. In both 2022 and 2023, detached houses were the most
+              popular. However, by 2024, there was a noticeable increase in the
+              purchase of semi-detached houses.
+            </p>
+
+            <img
+              class="w-100 pt-3 pb-3 img img-fluid"
+              src="./charts/PropertyPerformance_Chart4.png"
+              alt="Property Size Distribution by Square Meter Range"
+            />
+          </div>
         </div>
       </div>
     </div>
