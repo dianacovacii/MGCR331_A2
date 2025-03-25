@@ -186,10 +186,11 @@ td {
 .region {
   text-align: left;
 }
+
 form {
-  text-align: center;
+  text-align: left;
   margin: auto;
-  width: 300px;
+  width: 50%;
   padding: 30px;
   bottom: 25px;
   left: 50%;
@@ -225,7 +226,8 @@ label {
   gap: 5px;
 }
 
-select {
+#feedback {
+  width: 50%;
   padding: 7px;
   color: #1f7a8c;
 }
