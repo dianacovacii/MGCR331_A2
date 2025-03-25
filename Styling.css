@@ -29,6 +29,7 @@ html {
   border: #1f7a8c;
   transition: all 0.2s ease-in-out;
   margin: 0;
+  padding: 10px 30px;
 }
 
 .btn-primary:hover {
@@ -198,15 +199,12 @@ form {
   color: #1f7a8c;
 }
 
-button {
-  background: #1f7a8c;
-  color: white;
-  padding: 7px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-  font-size: 18px;
+#submit-btn {
+  margin-top: 48px;
+}
+
+#submit-btn:hover {
+  margin-top: 48px;
 }
 
 input {
@@ -230,14 +228,21 @@ label {
   margin: auto;
 }
 
-#type-answer {
+#typed-answer {
   font-size: 18px;
+}
+
+#typed-answer div {
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 #feedback {
   width: 50%;
   padding: 7px;
   color: #1f7a8c;
+  border: 1px solid #93b4e5;
+  border-radius: 5px;
 }
 
 .radio-group div {

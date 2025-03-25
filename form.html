@@ -146,25 +146,26 @@
     <div class="row">
       <form class="pt-5 pb-5">
 
-        <div>
-          <label for="Question1">Which city should we do next?</label><br>
-          <input type="text" id="Question" name="Question"><br>
-        </div>
+        <div id="typed-answer">
+          <div>
+            <label for="Question1">Which city should we do next?</label><br>
+            <input type="text" id="Question" name="Question"><br>
+          </div>
 
-        <div>
-          <label for="Question2"> Do you have any questions?</label><br>
-          <input type="text" id="Question2" name="Question2"><br>
-        </div>
+          <div>
+            <label for="Question2"> Do you have any questions?</label><br>
+            <input type="text" id="Question2" name="Question2"><br>
+          </div>
 
-        <div>
-          <label for="feedback">Would you recommend our website to your friends?</label><br>
-          <select id="feedback" name="feedback">
-            <option value="Great">Yes</option>
-            <option value="Good">Maybe</option>
-            <option value="Needs Improvement">Needs Improvement</option>
-          </select>
+          <div>
+            <label for="feedback">Would you recommend our website to your friends?</label><br>
+            <select id="feedback" name="feedback">
+              <option value="Great">Yes</option>
+              <option value="Good">Maybe</option>
+              <option value="Needs Improvement">Needs Improvement</option>
+            </select>
+          </div>
         </div>
-
         <br>
 
         <div>
@@ -195,7 +196,7 @@
               <label for="oceania">Oceania</label>
             </div>
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" class="btn-primary" id="submit-btn">Submit</button>
       </form>
 
     </div>
