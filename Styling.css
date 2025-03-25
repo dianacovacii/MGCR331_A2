@@ -206,6 +206,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
+  font-size: 18px;
 }
 
 input {
@@ -218,12 +219,19 @@ input {
 
 label {
   margin-bottom: 5px;
+  font-size: 18px;
 }
 
 .radio-group {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  width: fit-content;
+  margin: auto;
+}
+
+#type-answer {
+  font-size: 18px;
 }
 
 #feedback {
