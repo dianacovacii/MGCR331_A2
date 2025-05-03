@@ -1,4 +1,5 @@
 MGCR 331 HTML and CSS Group Project
+
 Members - Diana Covaci, Veronica Marallag, Aymeric Faig
 
 Overview:
